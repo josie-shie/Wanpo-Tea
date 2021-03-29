@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanpo Tea</title>
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+        }
+        .container{
+            margin: 0 auto;           
+        }
+        .bgc{
+            width: 100%;
+            height: 100vh;
+            background: url(./image/shopbanner-1.jpeg) center center/cover no-repeat;
+            padding: 15px 25px;
+            /* background-size: cover; */
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .img-logo{
+            height: 70px;
+            padding: 20px;
+        }
+
+        .nav-link{
+            height: 30px;
+            padding: 20px;
+        }
+        
+        .nav-menu{
+            display: flex;
+            justify-content: right;
+        }
+
+        .nav-menu a{
+            margin: 20px;
+            text-decoration: none;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            color: #000;
+            
+        }
+        .title{
+            width: 100%;
+            background-color: #000;
+            padding: 300px 200px;
+        }
+        .title h1{
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+        }
+        .title p{
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .aiyu{
+            width: 100%;
+        }
+
+        .drink{
+            background: rgb(211, 184, 159);
+            height: 800px;
+        }
+        /* .name{
+            display: flex;
+            justify-content: center;
+            padding: 300px;
+            height: 600px;
+        } */
+
+        .name img{
+            height: 250px;
+        }
+        
+        .img-tig1, .img-tig2, .img-tea, .img-straw, .imgscro{ 
+            height: 350px;
+        }
+
+        .brown-banner{
+            position: relative;
+            padding: 200px 0 ;
+            margin: 0;
+        }
+        
+        .img-wan{
+            position: absolute;
+            top: 350px;    
+            right: 700px;
+        }
+
+        .img-po{
+            position: absolute;
+            top: 350px;    
+            left: 690px;
+        }
+        
+        .img-tig1{
+            position: absolute;
+            top: 350px;    
+            left: 70px;
+        }
+
+        .img-straw{
+            position: absolute;
+            top: 250px;
+            left: calc(50% - 19px);
+        }
+
+        .img-tea{
+            position: absolute;
+            top: 300px;
+            left: calc(50% - 100px);
+        }
+        
+        .img-tig2{
+            position: absolute;
+            top: 350px;    
+            right: 70px;
+        }
+
+        .img-scro{
+            position: absolute;
+            top: 700px;
+            right: calc(50% - 165px);
+        }
+
+        .circle{
+            height: 1200px; /*用了絕對定位沒有高度 就必須自己設置高度嗎 這樣不就寫死？*/
+            position: relative; 
+            padding-top: 150px;
+            background-color:rgb(211, 184, 159);
+        }
+/* ---------------這裡有問題想請教老師------------ */
+        .img1{
+            width: 300px;
+            height: 300px;
+            overflow: hidden; 
+            border-radius: 150px;
+            position: absolute;
+            right: 250px;       
+        }
+        .img1 img{
+            width: 550px;
+        }
+
+        .no1{
+          font-size: 4rem;
+          position: absolute;
+          top: 80px;
+          left: 520px;
+        }
+
+        .quality{
+          position: absolute;
+          left: 300px;
+        }
+        
+        .p-1{
+          width: 300px;
+          font-size: 0.5rem;
+        }
+
+        .img2{
+            width: 300px;
+            height: 300px;
+            overflow: hidden; 
+            border-radius: 150px; 
+            position: absolute;
+            top: 550px;
+            left: 250px;  
+        }
+        .img2 img{
+            width: 550px;
+        }
+
+        .no2{
+          font-size: 4rem;
+          position: absolute;
+          top: 530px;
+          right: 320px;
+        }
+
+        .service{
+          position: absolute;
+          top: 600px;
+          right: 300px;
+        }
+        
+        .p-2{
+          width: 300px;
+          font-size: 0.5rem;
+        }
+
+        .img3{
+            width: 300px;
+            height: 300px;
+            overflow: hidden; 
+            border-radius: 150px;
+            position: absolute;
+            top: 950px;
+            right: 250px;      
+        }
+        .img3 img{
+            width: 550px;
+        }
+
+        .no3{
+          font-size: 4rem;
+          position: absolute;
+          top: 930px;
+          right: 660px;
+        }
+
+        .teamwork{
+          position: absolute;
+          top: 1000px;
+          left: 300px;
+        }
+        
+        .p-3{
+          width: 300px;
+          font-size: 0.5rem;
+        }
+
+        .card{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          background: #000;
+          padding: 200px 0 100px 0;
+          /*為何推了margin是白色＠＠？*/
+        }
+/* ------------怎麼把垂直得文字靠左------------- */
+        .card-box{
+          width: 334px;
+          height: 228px;
+          margin: 10px;
+          padding: 20px;  /*為何更改padding會往下換行*/
+          background-color: #fff;
+        }
+
+        .card-box > a{
+            text-decoration: none;
+            writing-mode:vertical-rl ;
+            color: #000;
+            letter-spacing: 6px;
+        }
+
+        .card-p{
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .card-2{
+            display: flex;
+        }
+
+/*----------為何object-fit object-position對圖片置中沒用-------*/
+        .news{
+            width: 200px;
+            display:block;
+            margin: auto;
+
+        }
+
+        .more{
+            width: 100%;
+            padding-top: 100px;
+            background-color: #000;
+        }
+
+        .more > img{
+            width: 300px;
+            height: 80px;
+            display: block;
+            margin: auto;
+        }
+
+        .footer{
+            width: 100%;
+            background: url(./image/footer-bg.svg) center center/cover no-repeat;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+        .footer-word-1{
+            position: absolute;
+            top: 120px;
+            left: calc(50% - 250px);
+        }
+
+        .footer-word-2{
+            position: absolute;
+            top: 120px;
+            right: calc(50% - 250px);
+        }
+
+        .social-media > img{
+            margin: 20px;
+        }
+
+        .copy-right{
+            font-size: 0.5rem;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+      <div class="row bgc">
+        <div class="nav-logo">
+            <img class="img-logo" src="./image/logo-2-black.svg" alt="">
+        </div>
+        <div class="nav-menu">
+            <a href="#">NEWS</a>
+            <a href="#">DRINKS</a>
+            <a href="#">SHOP</a>
+            <a href="#">CONNECT</a>
+        </div>
+        <div class="nav-link">  
+          <img  src="./image/islandtea.svg" alt="">
+          <img  src="./image/hamburger.svg" alt="">
+        </div>
+      </div> 
+        
+
+    <main>
+        <div class="row">
+            <div class="title">
+                <h1>WANPO STORY</h1>
+                <p>『轉進巷子之後，你會看到一個磚紅色大門，門口有一顆針葉樹，那個就是我家』<br>
+                    在那個沒有導航的年代，每當坐計程車回家，我都是這樣跟司機說我在眷村的家。對了，當時的計程車還是暗紅色的。<br><br>
+                    這個島嶼千千萬萬的故事，都隨著海洋的靜美萬萬不息，浪波迴盪。<br>
+                    在台灣，每個眷村，都有著關於一杯茶的故事。<br>
+                    　　從小，我就在瀰漫著酸酸甜甜的氣息中長大成人。眷村是一個大社區，鄰居說著各地口音，有著不同的生活習慣和口味，我的童年回憶在這裡穿梭，而來自各地的阿姨鄰居們也都在鳴光商行客串，買了一杯愛玉檸檬，消磨一下午嘮嗑時光。<br><br>
+                    萬波，想讓這風味傳唱下去。
+                </p>
+            </div>
+        </div>
+        <img class="aiyu" src="./image/home-banner2.png" alt=""> 
+        <div class="drink">
+            <div class="brown-banner">
+                <div class="name">
+                    <img class="img-wan" src="./image/wan.png" alt="">
+                    <img class="img-po" src="./image/po.png" alt="">
+                </div>
+                <img class="img-tig1" src="./image/sweet-tiger-1.svg" alt="">
+                <img class="img-straw" src="./image/sock.png" alt="">
+                <img class="img-tea" src="./image/index-banner-drink2.png" alt="">
+                <img class="img-tig2" src="./image/sweet-tiger-2.svg" alt="">
+                <img class="img-scro" src="./image/idnex-scrolldown.svg" alt="">
+            </div>
+        </div>
+
+        <div class="circle">
+            <div class="img1">
+                <img src="./image/persist-1.jpg" alt="">
+            </div>
+            <h1 class="no1">01</h1>
+            <div class="quality">
+              <h2>QUALITY / 品質</h2>
+              <p class="p-1">
+                萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40 年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
+              </p>
+            </div>  
+            <div class="img2">
+                <img src="./image/persist-2.jpg" alt="">
+            </div>
+            <h1 class="no2">02</h1>
+            <div class="service">
+              <h2>SERVICE / 服務</h2>
+              <p class="p-2">
+                一個美好的體驗－萬波會從親切的招呼顧客開始，並且專業的為顧客做菜單介紹，透過乾淨明亮的玻璃能夠看到店員製作飲料的過程，拿到飲料後我們會說聲小心拿和路上小心，希望顧客能有在家一樣的氛圍，在這樣繁忙的生活裡頭，能夠得到一點點放鬆的時光。
+              </p>
+            </div>  
+            <div class="img3">
+                <img src="./image/persist-3.jpg" alt="">
+            </div>
+            <h1 class="no3">03</h1>
+            <div class="teamwork">
+              <h2>TEAMWORK / 團隊</h2>
+              <p class="p-3">
+                萬波是一個專業且擁有很多想法的團隊，我們致力把生活中的故事分享給消費者－關於台灣眷村。古早味飲品是大多數人的回憶，因此能讓更多人輕易地去連結這段即將逝去的歷史。萬波的團隊互相激盪出新策略、評估可能性、有著因應潮流的彈性以及貫徹的執行力，使團隊成為最有效能的後勤支援，立志做出最台灣味的眷村飲品。
+            </div> 
+        </div>
+        
+        <div class="card">
+            <div class="card-box card-1">
+                <a href="#">
+                    <h2>
+                    【限定飲品】市場豆花，今日開始擺攤...
+                    </h2>
+                    <p class="card-p">
+                    茶湯選料，多種搭配
+                    <br>
+                    來一杯遵循內心的豆花吧！
+                    </p> 
+                </a>
+            </div>
+
+            <div class="card-box card-2">
+                <img class="news" src="./image/flaginnews.svg" alt="">
+            </div>
+             
+            <div class="card-box card-3">
+                <a href="#">
+                    <h2>
+                    【季節限定】老薑熬的！薑汁系列
+                    </h2>
+                    <p class="card-p">
+                        萬波秋冬特刊，每一口都溫暖你的身心靈！
+                    </p> 
+                </a>
+            </div>
+
+            <div class="card-box card-4">
+                <a href="#">
+                    <h2>
+                    【限定飲品】萬波 x VWI by CHADWANG 波霸鴛鴦拿鐵
+                    </h2>
+                    <p class="card-p">
+                    當萬波與世界盃咖啡沖煮冠軍碰撞之後．．．
+                    </p> 
+                </a>
+            </div>
+
+            <div class="card-box card-5">
+                <a href="#">
+                    <h2>
+                    【萬波 x 7-ELEVEN x 楊枝甘露波士頓派
+                    </h2>
+                    <p class="card-p">
+                    鬆軟的戚風蛋糕＋芒果柚子椰漿慕斯內餡，有夠派！！
+                    </p> 
+                </a>
+            </div>
+            
+            <div class="card-box card-6">
+                <a href="#">
+                    <h2>
+                    【限定飲品】有一種芋感，_________？
+                    </h2>
+                    <p class="card-p">
+                    2 0 2 0 冬 季 溫 暖 巨 獻
+                    </p> 
+                </a>
+            </div>
+            <div class="more">    
+                <img src="./image/more-white.svg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <img class="footer-word-1" src="./image/footer-word-1.svg" alt="">
+                <img class="footer-word-2" src="./image/footer-word-2.svg" alt="">
+                <img src="./image/footer-flag.svg" alt="">
+                <p>安谷國際股份有限公司</p>
+                <p>GOOD International Co.,LTD</p>
+                <p>TEL. 0800-666-155</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-24262239</p>
+                <div class="social-media">
+                    <img src="./image/ig.svg" alt="">
+                    <img src="./image/fb.svg" alt="">
+                </div>
+                <p class="copy-right">版權所有 © 2019 AIM GOOD International</p>
+                <p class="copy-right" >All Rights Reserved</p>
+
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
