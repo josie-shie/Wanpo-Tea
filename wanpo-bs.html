@@ -37,6 +37,11 @@
             width: 100%;
         }
 
+        .cards{
+            background-color: rgb(0, 0, 0);
+        }
+
+
         .card-box {
             width: 334px;
             height: 250px;
@@ -55,11 +60,6 @@
             text-decoration: none;
         }
 
-        .container-2 {
-            width: ;
-            background-color: rgb(0, 0, 0);
-        }
-
         .flaginnews {
             width: 200px;
         }
@@ -69,6 +69,54 @@
             display: block;
             margin: auto;
         }
+
+        .footer-bg{
+            height: 400px;
+            background: url(./image/footer-bg.svg) center center/cover no-repeat;
+        }
+
+        .footer{
+            position: relative;
+        }
+
+        .word-1{
+            position: absolute;
+            top: 150px;
+            left: 0px;
+
+        }
+
+        .flag{
+            position: absolute;
+            top: 50px;
+            left: calc(50% - 170px);
+
+        }
+
+        .word-2{
+            position: absolute;
+            top: 150px;
+            right: 0;
+
+        }
+
+        .company-info{
+            position: absolute;
+            top: 150px;
+            left: calc(50% - 190px);
+        }
+
+
+        @media screen and (max-width:992px){
+            li{
+                border-bottom:0.5px solid #ccc;
+            }
+        }
+
+
+
+
+
     </style>
 
 </head>
@@ -84,18 +132,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto my-3">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-center" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center">
                         <a class="nav-link" href="#">Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center">
                         <a class="nav-link" href="#">
                             About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">News</a>
                     </li>
                 </ul>
@@ -125,120 +173,143 @@
         <img class="aiyu img-fluid" src="./image/home-banner2.png" alt="">
 
         <div class="container py-5">
-            <div class="circle-1 mt-3 pt-5 pb-5">
-                <div class="d-flex flex-wrap align-items">
-                    <div class="title col-12 col-md-6">
-                        <h4 class="font-weight-bolde">QUALITY / 品質</h4>
-                        <p>萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40
-                            年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
-                        </p>
-                    </div>
-                    <div class="img-1 col-12 col-md-6">
-                        <div class="tea mx-auto">
-                            <img src="./image/persist-1.jpg" alt="">
+            <div class="wanpo-detail w-80 mx-auto">
+                <div class="circle-1 mt-3 mb-5">
+                    <div class="d-flex flex-wrap align-items">
+                        <div class="title col-12 col-md-6">
+                            <h4 class="font-weight-bolde">QUALITY / 品質</h4>
+                            <p>萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40
+                                年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
+                            </p>
+                        </div>
+                        <div class="img-1 col-12 col-md-6">
+                            <div class="tea mx-auto">
+                                <img src="./image/persist-1.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="circle-2 pt-3 pb-5">
-                <div class="d-flex flex-wrap align-items">
-                    <div class="img-1 col-12 col-md-6">
-                        <div class="tea mx-auto">
-                            <img src="./image/persist-2.jpg" alt="">
+                <div class="circle-2 mb-5">
+                    <div class="d-flex flex-wrap align-items">
+                        <div class="title order-md-2 col-12 col-md-6">
+                            <h4 class="font-weight-bolde">SERVICE / 服務</h4>
+                            <p>萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40
+                                年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
+                            </p>
+                        </div>
+                        <div class="img-1 col-12 col-md-6">
+                            <div class="tea mx-auto">
+                                <img src="./image/persist-2.jpg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="title col-12 col-md-6">
-                        <h4 class="font-weight-bolde">SERVICE / 服務</h4>
-                        <p>萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40
-                            年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
-                        </p>
-                    </div>
                 </div>
-            </div>
-
-            <div class="circle-3 pt-3 pb-5">
-                <div class="d-flex flex-wrap align-items">
-                    <div class="title col-12 col-md-6">
-                        <h4 class="font-weight-bolde">QUALITY / 品質</h4>
-                        <p>萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40
-                            年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
-                        </p>
-                    </div>
-                    <div class="img-1 col-12 col-md-6">
-                        <div class="tea mx-auto">
-                            <img src="./image/persist-1.jpg" alt="">
+                <div class="circle-3 mb-5">
+                    <div class="d-flex flex-wrap align-items">
+                        <div class="title col-12 col-md-6">
+                            <h4 class="font-weight-bolde">QUALITY / 品質</h4>
+                            <p>萬波每一步都堅持從茶園到茶店產地直送。從摘選，焙茶，補火，煮製，釋放難得一見的經典茶香，萬波將40
+                                年代的匠人精神發揮在手搖茶店中。對於萬波來說，遵循古法「煮茶」才能詮釋真正的茶的美學，掌握特性與適當的沖泡手法，並讓精挑細選的配料建築在古早味之中，突顯出不同茶品其獨特的口感與香氣。
+                            </p>
+                        </div>
+                        <div class="img-1 col-12 col-md-6">
+                            <div class="tea mx-auto">
+                                <img src="./image/persist-1.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-2">
-            <div class="d-flex flex-wrap  py-5 px-5">
-                <div class="col-12 col-md-6 col-xl-4 mb-3 d-flex justify-content-center justify-content-xl-end">
-                    <div class="card-box text-right mx-auto mx-xl-0">
+        <div class="cards w-100 px-0 mx-0 pt-5">
+            <div class=""> <!--老師我這裡原本想要包一層 用它的寬度去當作flex的界線 他的外層寬度w-100 內層寬度想用w-80 但是除了w-50之外都沒變化＠＠-->
+                <div class="cards d-flex flex-wrap justify-content-center aling-content-center col-md-10 col-lg-4 col-lg-12 mx-auto">
+                    
+                    <div class="card-box card-1 mb-4 mx-2 d-flex justify-content-end">
                         <a href="#">
-                            <h2>【限定飲品】市場豆花，今日開始擺攤...</h2>
-                            <p>茶湯選料，多種搭配!來一杯遵循內心的豆花吧！</p>
+                            <h4 class="mr-0">【限定飲品】市場豆花，今日開始擺攤...</h4>
+                            <p class="m-0">茶湯選料，多種搭配</p>
+                            <p class="mr-auto">來一杯遵循內心的豆花吧！</p>
                         </a>
                     </div>
-                </div>
 
-                <div class="col-12 col-md-6 col-xl-4 mb-3">
-                    <div class="card-box d-flex text-right mx-auto ">
+                    <div class="card-box card-2 mb-4 mx-2 d-flex justify-content-center aling-content-center">
                         <a href="#">
                             <img class="flaginnews" src="./image/flaginnews.svg" alt="">
                         </a>
                     </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-xl-4 mb-3">
-                    <div class="card-box text-right mx-auto mr-md-auto mr-xl-auto">
+                    
+                    <div class="card-box card-3 mb-4 mx-2 d-flex justify-content-end">
                         <a href="#">
-                            <h2>【限定飲品】市場豆花，今日開始擺攤...</h2>
-                            <p>茶湯選料，多種搭配!來一杯遵循內心的豆花吧！</p>
+                            <h4 class="mr-0">【季節限定】老薑熬的！薑汁系列</h4>
+                            <p class="m-0">萬波秋冬特刊，每一口都溫暖你的身心靈！</p>
+                        </a>
+                    </div>
+
+                    <div class="card-box card-4 mb-4 mx-2 d-flex justify-content-end">
+                        <a href="#">
+                            <h4 class="mr-0">【限定飲品】萬波 x VWI by CHADWANG 波霸鴛鴦拿鐵</h4>
+                            <p class="m-0">當萬波與世界盃咖啡沖煮冠軍碰撞之後．．．</p>
+                        </a>
+                    </div>
+                    
+                    <div class="card-box card-5 mb-4 mx-2 d-flex justify-content-end">
+                        <a href="#">
+                            <h4 class="mr-0">限定飲品】市場豆花，今日開始擺攤...</h4>
+                            <p class="m-0">茶湯選料，多種搭配</p>
+                            <p class="mr-auto">來一杯遵循內心的豆花吧！</p>
+                        </a>
+                    </div>
+
+                    <div class="card-box card-6 mb-4 mx-2 d-flex justify-content-end">
+                        <a href="#">
+                            <h4 class="mr-0"> 【萬波 x 7-ELEVEN x 楊枝甘露波士頓派</h4>
+                            <p class="m-0">鬆軟的戚風蛋糕＋芒果柚子椰漿慕斯內餡，有夠派！！</p>
                         </a>
                     </div>
                 </div>
-
-                <div class="col-12 col-md-6 col-xl-4 mb-3">
-                    <div class="card-box text-right mx-auto mr-md-auto mr-lg-auto">
-                        <a href="#">
-                            <h2>【限定飲品】市場豆花，今日開始擺攤...</h2>
-                            <p>茶湯選料，多種搭配!來一杯遵循內心的豆花吧！</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-xl-4 mb-3">
-                    <div class="card-box text-right mx-auto mr-md-auto mr-lg-auto">
-                        <a href="#">
-                            <h2>【限定飲品】市場豆花，今日開始擺攤...</h2>
-                            <p>茶湯選料，多種搭配!來一杯遵循內心的豆花吧！</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-xl-4 mb-3">
-                    <div class="card-box text-right mx-auto mr-md-auto mr-lg-auto">
-                        <a href="#">
-                            <h2>【限定飲品】市場豆花，今日開始擺攤...</h2>
-                            <p>茶湯選料，多種搭配!來一杯遵循內心的豆花吧！</p>
-                        </a>
-                    </div>
-                </div>
-
+                <div class="d-flex justify-content-center"><img class="my-5" src="./image/more-white.svg" alt=""></div>
             </div>
-
-
-
-            <div class="d-flex justify-content-center"><img src="./image/more-white.svg" alt=""></div>
         </div>
 
+        <footer>
+            <div class="footer-bg">
+                <div class="footer w-50 mx-auto">
+                    <div class="word-1">
+                        <img src="./image/footer-word-1.svg" alt="">
+                    </div>
+                    <div class="word-2">
+                        <img src="./image/footer-word-2.svg" alt="">
+                    </div>
+                    <div class="flag">
+                        <img src="./image/footer-flag.svg" alt="">
+                    </div>
+                    <div class="company-info text-center pb-5">
+                        <p>安谷國際股份有限公司</p>
+                        <p>GOOD International Co.,LTD</p>
+                        <p>TEL. 0800-666-155</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-24262239</p>
+                        <div class="social-media mb-2">
+                            <img class="mr-2" src="./image/ig.svg" alt="">
+                            <img class="mr-2" src="./image/fb.svg" alt="">
+                        </div>
+                        <small class="copy-right">版權所有 © 2019 AIM GOOD International</small>
+                        <small class="copy-right" >All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
+    
+            
 
     </main>
+
+
+
+
+    </div>
 
 
 
