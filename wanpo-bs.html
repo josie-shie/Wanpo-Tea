@@ -10,7 +10,52 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
         .bgc {
+            position: relative;
             max-width：100%;
+        }
+
+        .wanpo-nav{
+            z-index: 4;
+        }
+
+        .index-drink{
+            height: 70vh;
+            position: absolute;
+            top: 150px;
+            left: calc(50% - 19vh);
+            z-index: 2;
+        }
+
+        .rydercup{
+            position: absolute;
+            z-index: 2;
+            left: 50px;
+            top: 50px;
+        }
+
+        .people{
+            height: 280px;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .people-1{
+            bottom: 10px;
+            right: 210px;
+        }
+
+        .people-2{
+            -moz-transform:scaleX(-1);
+            -webkit-transform:scaleX(-1);
+            -o-transform:scaleX(-1);
+            transform:scaleX(-1);
+            bottom: 0px;
+            left: 300px;
+        }
+
+        .people-3{
+            bottom: -10px;
+            left: 50px;
         }
 
         .wanpo-story {
@@ -35,6 +80,24 @@
 
         .aiyu {
             width: 100%;
+        }
+
+        .tirger-area{
+            width: 90vh;
+            position: relative;
+        }
+
+        .tiger{
+            height: 70vh;
+        }
+
+        .word{
+            height: 30vh;
+        }
+
+        .drink{
+            height: 70vh;
+            position:absolute;
         }
 
         .cards{
@@ -103,7 +166,8 @@
         .company-info{
             position: absolute;
             top: 150px;
-            left: calc(50% - 190px);
+            /*老師我忘記檢調物體本身的50%怎麼寫了ＱＱ*/
+            left: calc(50% - 182px);
         }
 
 
@@ -111,9 +175,30 @@
             li{
                 border-bottom:0.5px solid #ccc;
             }
+
+            .index-drink{
+                height: 50vh;
+                position: absolute;
+                top: 130px;
+                left: calc(50% - 13.5vh);
+                z-index: 2;
+            }
+
+            .wanpo-tirger{
+                display: none;
+            }
+
+
         }
 
-
+        @media screen and (max-width:768px){
+            .index-drink{
+                display: none;
+            }
+            .people{
+                display: none;
+            }
+        }
 
 
 
@@ -122,7 +207,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+
+    <!--老師我把nav包進去bgc裡面 希望nav可以蓋在底圖上，但是當我螢幕縮小下拉軒單出現的時候 只有我的紅茶不會跟這bgc一起往下擠 ＠＠-->
+    <nav class="wanpo-nav navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./image/logo-2-black.svg" alt="">
@@ -152,8 +239,13 @@
     </nav>
 
     <div class="bgc">
+        <img class="people people-1" src="./image/index-banner-3.png" alt="">
+        <img class="people people-2" src="./image/index-banner-4.png" alt="">
+        <img class="people people-3" src="./image/index-banner-5.png" alt="">
+        <img class="index-drink" src="./image/index-banner-drink2.png" alt="">
         <img class="img-fluid col-xl-12 px-0" src="./image/shopbanner-1.jpeg" alt="">
     </div>
+        
 
     <main>
         <!--p m 數值最大就到5 萬一不夠呢?-->
@@ -222,6 +314,17 @@
             </div>
         </div>
 
+        <div class="wanpo-tirger container my-5">
+            <div class="tiger-area row justify-content-center align-items-center">
+                <img class="tiger" src="./image/sweet-tiger-1.svg" alt="">
+                <img class="word mr-4" src="./image/wan.png" alt="">
+                <img class="word ml-4" src="./image/po.png" alt="">
+                <img class="tiger" src="./image/sweet-tiger-2.svg" alt="">
+                <img  class="drink" src="./image/index-banner-drink2.png" alt="">
+            </div>
+            <img class="d-flex justify-content-center mx-auto my-5" src="./image/idnex-scrolldown.svg" alt="">
+        </div>
+
         <div class="cards w-100 px-0 mx-0 pt-5">
             <div class=""> <!--老師我這裡原本想要包一層 用它的寬度去當作flex的界線 他的外層寬度w-100 內層寬度想用w-80 但是除了w-50之外都沒變化＠＠-->
                 <div class="cards d-flex flex-wrap justify-content-center aling-content-center col-md-10 col-lg-4 col-lg-12 mx-auto">
@@ -272,44 +375,34 @@
                 <div class="d-flex justify-content-center"><img class="my-5" src="./image/more-white.svg" alt=""></div>
             </div>
         </div>
-
-        <footer>
-            <div class="footer-bg">
-                <div class="footer w-50 mx-auto">
-                    <div class="word-1">
-                        <img src="./image/footer-word-1.svg" alt="">
+    </main>
+    <footer>
+        <div class="footer-bg">
+            <div class="footer w-50 mx-auto">
+                <div class="word-1">
+                    <img src="./image/footer-word-1.svg" alt="">
+                </div>
+                <div class="word-2">
+                    <img src="./image/footer-word-2.svg" alt="">
+                </div>
+                <div class="flag">
+                    <img src="./image/footer-flag.svg" alt="">
+                </div>
+                <div class="company-info text-center pb-5">
+                    <p>安谷國際股份有限公司</p>
+                    <p>GOOD International Co.,LTD</p>
+                    <p>TEL. 0800-666-155</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-24262239</p>
+                    <div class="social-media mb-2">
+                        <img class="mr-2" src="./image/ig.svg" alt="">
+                        <img class="mr-2" src="./image/fb.svg" alt="">
                     </div>
-                    <div class="word-2">
-                        <img src="./image/footer-word-2.svg" alt="">
-                    </div>
-                    <div class="flag">
-                        <img src="./image/footer-flag.svg" alt="">
-                    </div>
-                    <div class="company-info text-center pb-5">
-                        <p>安谷國際股份有限公司</p>
-                        <p>GOOD International Co.,LTD</p>
-                        <p>TEL. 0800-666-155</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-24262239</p>
-                        <div class="social-media mb-2">
-                            <img class="mr-2" src="./image/ig.svg" alt="">
-                            <img class="mr-2" src="./image/fb.svg" alt="">
-                        </div>
-                        <small class="copy-right">版權所有 © 2019 AIM GOOD International</small>
-                        <small class="copy-right" >All Rights Reserved</small>
-                    </div>
+                    <small class="copy-right">版權所有 © 2019 AIM GOOD International</small>
+                    <small class="copy-right" >All Rights Reserved</small>
                 </div>
             </div>
-        </footer>
-
-    
-            
-
-    </main>
-
-
-
-
-    </div>
+        </div>
+    </footer>
 
 
 
